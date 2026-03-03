@@ -25,7 +25,7 @@ export default function Portfolio() {
 
   return (
     <section id="portofolio" className="py-24 px-6 bg-black text-white overflow-hidden">
-      <div className="max-w-5xl mx-auto"> {/* Mengecilkan max-width container utama */}
+      <div className="max-w-5xl mx-auto">
         
         {/* Header Section */}
         <motion.div
@@ -35,9 +35,6 @@ export default function Portfolio() {
           className="mb-12"
         >
           <div className="flex items-center gap-3 mb-2">
-            <div className="p-2 bg-zinc-900 border border-zinc-800 rounded-lg text-blue-500">
-              <code className="font-bold text-xl">{"</>"}</code>
-            </div>
             <h2 className="text-4xl font-bold tracking-tight">Projects</h2>
           </div>
           <p className="text-zinc-400 text-base">
@@ -45,7 +42,7 @@ export default function Portfolio() {
           </p>
         </motion.div>
 
-        {/* Grid Project - Menggunakan 2 kolom yang lebih rapat */}
+        {/* Grid Project */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -56,9 +53,10 @@ export default function Portfolio() {
           {projects.map((project, index) => (
             <motion.div key={index} variants={cardVariants}>
               <Card 
-                className="w-full bg-zinc-950 border border-zinc-800/50 rounded-[2rem] overflow-hidden group shadow-none"
+                // Menambahkan animasi melayang (hover:-translate-y-2), glow shadow, dan perubahan border saat di-hover
+                className="w-full bg-zinc-950 border border-zinc-800/50 rounded-[2rem] overflow-hidden group shadow-none transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(59,130,246,0.2)] hover:border-blue-500/50"
               >
-                {/* Image Section - Rasio disesuaikan agar tidak terlalu tinggi */}
+                {/* Image Section */}
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
                     alt={project.title}
@@ -68,14 +66,14 @@ export default function Portfolio() {
                   />
                 </div>
 
-                <CardBody className="p-6"> {/* Padding dikurangi dari 8 ke 6 */}
+                <CardBody className="p-6">
                   {/* Tech Stack Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, i) => (
                       <Chip
                         key={i}
                         variant="flat"
-                        size="sm" // Ukuran chip diperkecil
+                        size="sm"
                         className="bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[10px] font-bold uppercase"
                       >
                         {tech}
@@ -85,7 +83,8 @@ export default function Portfolio() {
 
                   {/* Title & Date */}
                   <div className="flex justify-between items-start mb-3">
-                    <h3 className="text-xl font-bold text-blue-500 group-hover:text-blue-400 transition-colors">
+                    {/* Judul dibuat putih, saat di-hover berubah jadi biru */}
+                    <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
                       {project.title}
                     </h3>
                     <span className="text-[10px] font-medium text-zinc-500 bg-zinc-900 px-2 py-0.5 rounded-full uppercase tracking-tighter border border-zinc-800">
@@ -93,8 +92,8 @@ export default function Portfolio() {
                     </span>
                   </div>
 
-                  {/* Description - Ukuran font dikecilkan agar lebih clean */}
-                  <p className="text-zinc-400 leading-relaxed text-sm line-clamp-3">
+                  {/* Description - Warna putih */}
+                  <p className="text-white leading-relaxed text-sm line-clamp-3 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                     {project.description}
                   </p>
                 </CardBody>
