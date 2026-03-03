@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Button } from "@heroui/react";
 
 export default function Hero() {
-  const fullText = "Halo, Saya Syaiful Amin";
+  const fullText = "Hello, I am Syaiful Amin";
   const [text, setText] = useState("");
 
   useEffect(() => {
