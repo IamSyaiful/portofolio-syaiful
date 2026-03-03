@@ -39,7 +39,7 @@ export default function About() {
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <Card className="bg-zinc-950/80 border border-zinc-800 transition-all hover:-translate-y-2 hover:border-blue-500/50 group">
             <CardBody className="p-8">
-              <span className="text-sm font-semibold tracking-widest text-blue-500 uppercase">{aboutData.subtitle}</span>
+              <span className="text-2xl font-bold text-blue-500">{aboutData.subtitle}</span>
               <h2 className="mt-4 text-4xl font-bold leading-tight group-hover:text-blue-50 transition-colors">
                 {aboutData.titleLine1} <br /> {aboutData.titleLine2}
               </h2>

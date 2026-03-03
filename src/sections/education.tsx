@@ -1,51 +1,61 @@
+// sections/education.tsx
 "use client";
 
 import { educationData } from "@/data/education";
+import { Card, CardBody } from "@heroui/react";
 import { motion, Variants } from "framer-motion";
 
 export default function EducationSection() {
-  // Konfigurasi animasi untuk container (pembungkus list)
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Memberikan jeda muncul antar kartu
+        staggerChildren: 0.15,
       },
     },
   };
 
-  // Konfigurasi animasi untuk setiap kartu
   const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: { 
-        duration: 0.5, 
-        ease: "easeOut" // Sekarang TypeScript tidak akan protes
+        duration: 0.6, 
+        ease: "easeOut" 
       },
     },
   };
 
   return (
-    // Background utama hitam pekat
-    <section className="w-full bg-black py-20 px-4 overflow-hidden">
-      <div className="max-w-4xl mx-auto">
+    <section id="edukasi" className="relative py-28 px-6 bg-black text-white overflow-hidden">
+      {/* Grid: 1 kolom di mobile, 2 kolom di desktop */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
         
-        {/* Header Section dengan Animasi */}
+        {/* SISI KIRI: Judul Section */}
         <motion.div 
-          initial={{ opacity: 0, y: -10 }}
+          initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          // text-center di mobile, text-left di desktop
+          className="text-center md:text-left md:sticky md:top-28 mb-10 md:mb-0"
         >
-          <h2 className="text-4xl font-bold text-white mb-4">Education</h2>
-          {/* Garis dekoratif biru agar terlihat modern di background hitam */}
-          <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+          <span className="text-2xl font-bold text-blue-500">Education</span>
+          <h2 className="mt-4 text-4xl md:text-5xl font-bold text-white leading-tight">
+            Riwayat <br className="hidden md:block" /> Akademik
+          </h2>
+          
+          {/* Garis: mx-auto di mobile (tengah), md:mx-0 di desktop (kiri) */}
+          <div className="mt-6 w-20 h-1.5 bg-blue-600 rounded-full mx-auto md:mx-0 shadow-[0_0_15px_rgba(37,99,235,0.5)]"></div>
+          
+          {/* Deskripsi: mx-auto agar rata tengah di mobile */}
+          <p className="mt-6 text-zinc-400 max-w-sm text-lg mx-auto md:mx-0">
+            Berikut adalah perjalanan pendidikan formal yang telah saya tempuh hingga saat ini.
+          </p>
         </motion.div>
 
-        {/* List Kartu Pendidikan */}
+        {/* SISI KANAN: List Kartu Pendidikan */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -54,48 +64,51 @@ export default function EducationSection() {
           className="flex flex-col gap-6"
         >
           {educationData.map((edu) => (
-            <motion.a
-              key={edu.id}
-              variants={itemVariants}
-              href={edu.websiteUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              // Card: Hitam transparan dengan border halus agar terlihat premium
-              className="group block bg-zinc-900/40 border border-zinc-800 rounded-3xl p-6 shadow-2xl hover:bg-zinc-900 hover:border-blue-500/40 transition-all duration-300 cursor-pointer"
-            >
-              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-6">
-                
-                {/* Sisi Kiri: Logo & Info Instansi */}
-                <div className="flex items-center gap-6 flex-1 w-full">
-                  {/* Wrapper Putih untuk Logo agar kontras dengan background hitam */}
-                  <div className="bg-white p-2.5 rounded-2xl shrink-0 shadow-lg group-hover:scale-105 transition-transform duration-300">
-                    <img
-                      src={edu.imageUrl}
-                      alt={`Logo ${edu.institution}`}
-                      className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
-                    />
-                  </div>
+            <motion.div key={edu.id} variants={itemVariants}>
+              <a 
+                href={edu.websiteUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="block outline-none"
+              >
+                <Card 
+                  className="bg-zinc-950/80 border border-zinc-800 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_10px_40px_-10px_rgba(59,130,246,0.2)] group"
+                >
+                  <CardBody className="p-6 sm:p-8">
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-6">
+                      
+                      {/* Logo & Info */}
+                      <div className="flex items-center gap-6 flex-1 w-full text-left">
+                        <div className="bg-white p-3 rounded-2xl shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                          <img
+                            src={edu.imageUrl}
+                            alt={`Logo ${edu.institution}`}
+                            className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
+                          />
+                        </div>
 
-                  <div className="flex flex-col">
-                    <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
-                      {edu.institution}
-                    </h3>
-                    <p className="text-md sm:text-lg font-medium text-zinc-400 mt-1">
-                      {edu.major}
-                    </p>
-                  </div>
-                </div>
+                        <div className="flex flex-col">
+                          <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
+                            {edu.institution}
+                          </h3>
+                          <p className="text-zinc-400 font-medium mt-1 text-base">
+                            {edu.major}
+                          </p>
+                        </div>
+                      </div>
 
-                {/* Sisi Kanan: Badge Periode Tahun */}
-                {/* Dibuat Putih-Hitam agar kontras tinggi dan mudah dibaca */}
-                <div className="flex-shrink-0 self-end sm:self-start">
-                  <span className="text-xs sm:text-sm font-bold bg-white text-black px-5 py-2 rounded-full whitespace-nowrap shadow-[0_0_15px_rgba(255,255,255,0.1)] uppercase tracking-wider">
-                    {edu.period}
-                  </span>
-                </div>
+                      {/* Badge Tahun */}
+                      <div className="flex-shrink-0 self-end sm:self-start">
+                        <span className="text-[10px] sm:text-xs font-black bg-white text-black px-4 py-1.5 rounded-full shadow-xl uppercase tracking-tighter">
+                          {edu.period}
+                        </span>
+                      </div>
 
-              </div>
-            </motion.a>
+                    </div>
+                  </CardBody>
+                </Card>
+              </a>
+            </motion.div>
           ))}
         </motion.div>
       </div>

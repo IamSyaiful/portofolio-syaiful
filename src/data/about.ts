@@ -2,10 +2,12 @@
 import { AboutData } from "@/types/about";
 
 export const aboutData: AboutData = {
-  subtitle: "Tentang Saya",
+  subtitle: "About",
   titleLine1: "IT Programmer",
   titleLine2: "Web Backend Developer",
-  descriptionHtml: `Saya adalah seorang <span class="font-semibold text-white">IT Programmer</span> dengan pengalaman dalam pengembangan solusi perangkat lunak berbasis web. Sebagai alumni <span class="font-semibold text-white">Sistem Informasi Universitas Gunadarma (2020–2024)</span>, fokus utama saya adalah merancang dan mengimplementasikan sistem yang efisien, terukur, dan stabil menggunakan pendekatan <em>full-stack development</em>.`,
+  descriptionHtml: `A dual degree student majoring in Computer Engineering at Jember State Polytechnic with a strong interest in web development. Experienced as a Project Manager, Backend Web Developer, and Database Designer in academic projects. Skilled in managing team workflows, developing backend logic, and optimizing database structures. Highly motivated to continue learning and contributing to innovative digital solutions.
+
+Translated with DeepL.com (free version).`,
   skillsTitlePrefix: "Spesialisasi &",
   skillsHighlight: "Tech Stack",
   skillsTitleSuffix: "Inti",
