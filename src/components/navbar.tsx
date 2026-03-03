@@ -31,7 +31,8 @@ export default function Navbar() {
   const navLink = (id: string, label: string) => (
     <a
       href={`#${id}`}
-      className={`relative group transition duration-300 ${
+      onClick={() => setOpen(false)} // supaya auto close saat klik
+      className={`relative block w-fit md:w-auto transition duration-300 ${
         active === id ? "text-blue-400" : "text-white"
       }`}
     >
@@ -84,7 +85,7 @@ export default function Navbar() {
           open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="px-6 pb-6 space-y-4 pt-4">
+        <div className="px-6 pb-6 pt-4 flex flex-col gap-4">
           {navLink("beranda", "Beranda")}
           {navLink("tentang", "About")}
           {navLink("edukasi", "Education")}
