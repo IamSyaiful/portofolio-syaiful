@@ -1,5 +1,23 @@
+/* ===============================
+   Tailwind CSS v4
+================================ */
 @import "tailwindcss";
 
+/* ===============================
+   HeroUI Plugin
+   (hero.ts ADA DI FOLDER YANG SAMA)
+================================ */
+@plugin "./hero.ts";
+
+/* Scan komponen HeroUI */
+@source "../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}";
+
+/* Dark mode variant */
+@custom-variant dark (&:is(.dark *));
+
+/* ===============================
+   Theme Variables
+================================ */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -11,6 +29,9 @@
   --font-sans: var(--font-poppins);
 }
 
+/* ===============================
+   Dark Mode (system)
+================================ */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -18,8 +39,11 @@
   }
 }
 
+/* ===============================
+   Base Styles
+================================ */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }

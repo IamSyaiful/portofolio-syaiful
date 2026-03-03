@@ -37,11 +37,11 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-4">
-            <Button color="primary" size="lg">
+           <Button color="primary" variant="shadow">
               Lihat Portofolio
             </Button>
 
-            <Button variant="bordered" size="lg">
+            <Button color="primary" variant="shadow">
               Hubungi Saya
             </Button>
           </div>
