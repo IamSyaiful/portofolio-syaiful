@@ -29,6 +29,10 @@
   --font-sans: var(--font-poppins);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ===============================
    Dark Mode (system)
 ================================ */

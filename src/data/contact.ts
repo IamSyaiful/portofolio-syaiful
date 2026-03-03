@@ -2,10 +2,10 @@
 import { ContactData } from "@/types/contact";
 
 export const contactData: ContactData = {
-  badgeText: "Let's Connect",
-  title: "Open for Collaboration",
+  badgeText: "Let's work together",
+  title: "Let’s Build Something Great Together",
   description:
-    "I'm always excited to collaborate on meaningful projects, learn from new experiences, and contribute to a team. You can find my work on GitHub or reach out professionally via LinkedIn.",
+    "I enjoy turning ideas into real digital products and collaborating with others to create meaningful solutions. I’m always open to new challenges, teamwork, and learning opportunities. You can check out my projects on GitHub or reach out to me through LinkedIn.",
   cards: [
     {
       id: "github",

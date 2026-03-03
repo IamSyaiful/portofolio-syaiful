@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Button } from "@heroui/react";
+import Link from "next/link";
 
 export default function Hero() {
   const fullText = "Hello, I am Syaiful Amin";
@@ -22,7 +23,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center bg-black text-white px-4 md:px-6 pt-24">
+    <section id="beranda" className="min-h-screen flex items-center bg-black text-white px-4 md:px-6 pt-24">
       <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-10 items-center">
 
         {/* LEFT SIDE */}
@@ -33,16 +34,12 @@ export default function Hero() {
           </h1>
 
           <p className="text-gray-400 text-lg mb-8 text-justify">
-          A joint degree student majoring in Informatics Engineering with a strong interest in web development. Experienced as a Project Manager, Web Backend Developer, and Database Designer in academic projects. Skilled in managing team workflows, developing backend logic, and optimizing database structures. Highly motivated to continuously learn and contribute to innovative digital solutions.
+          Information Technology student passionate about web development, building scalable systems, and creating impactful digital solutions.
           </p>
 
           <div className="flex gap-4">
-           <Button color="primary" variant="shadow">
-              Lihat Portofolio
-            </Button>
-
-            <Button color="primary" variant="shadow">
-              Hubungi Saya
+           <Button as="a" href="#contact" color="primary" variant="shadow">
+              Contact Me
             </Button>
           </div>
         </div>

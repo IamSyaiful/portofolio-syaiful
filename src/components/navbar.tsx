@@ -15,10 +15,10 @@ export default function Navbar() {
         <div className="space-x-7 hidden md:flex">
           <a href="#beranda">Beranda</a>
           <a href="#tentang">About</a>
-          <a href="#pendidikan">Education</a>
+          <a href="#edukasi">Education</a>
           <a href="#portofolio">Portfolio</a>
           <a href="#pengalaman">Experience</a>
-          <a href="#kontak">Kontak</a>
+          <a href="#contact">Contact</a>
         </div>
 
         {/* Animated Hamburger */}

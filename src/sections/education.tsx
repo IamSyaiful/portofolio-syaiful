@@ -30,7 +30,6 @@ export default function EducationSection() {
 
   return (
     <section id="edukasi" className="relative py-28 px-6 bg-black text-white overflow-hidden">
-      {/* Grid: 1 kolom di mobile, 2 kolom di desktop */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
         
         {/* SISI KIRI: Judul Section */}
@@ -38,7 +37,6 @@ export default function EducationSection() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          // text-center di mobile, text-left di desktop
           className="text-center md:text-left md:sticky md:top-28 mb-10 md:mb-0"
         >
           <span className="text-2xl font-bold text-blue-500">Education</span>
@@ -46,10 +44,8 @@ export default function EducationSection() {
             Riwayat <br className="hidden md:block" /> Akademik
           </h2>
           
-          {/* Garis: mx-auto di mobile (tengah), md:mx-0 di desktop (kiri) */}
-          <div className="mt-6 w-20 h-1.5 bg-blue-600 rounded-full mx-auto md:mx-0 shadow-[0_0_15px_rgba(37,99,235,0.5)]"></div>
+          {/* Garis biru telah dihapus dari sini */}
           
-          {/* Deskripsi: mx-auto agar rata tengah di mobile */}
           <p className="mt-6 text-zinc-400 max-w-sm text-lg mx-auto md:mx-0">
             Berikut adalah perjalanan pendidikan formal yang telah saya tempuh hingga saat ini.
           </p>
@@ -77,7 +73,6 @@ export default function EducationSection() {
                   <CardBody className="p-6 sm:p-8">
                     <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-6">
                       
-                      {/* Logo & Info */}
                       <div className="flex items-center gap-6 flex-1 w-full text-left">
                         <div className="bg-white p-3 rounded-2xl shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
                           <img
@@ -97,7 +92,6 @@ export default function EducationSection() {
                         </div>
                       </div>
 
-                      {/* Badge Tahun */}
                       <div className="flex-shrink-0 self-end sm:self-start">
                         <span className="text-[10px] sm:text-xs font-black bg-white text-black px-4 py-1.5 rounded-full shadow-xl uppercase tracking-tighter">
                           {edu.period}
