@@ -23,7 +23,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="beranda" className="min-h-screen flex items-center bg-black text-white px-4 md:px-6 pt-24">
+    <section id="beranda" className="min-h-screen flex items-center text-white px-4 md:px-6 pt-24">
       <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-10 items-center">
 
         {/* LEFT SIDE */}

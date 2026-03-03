@@ -29,7 +29,7 @@ export default function EducationSection() {
   };
 
   return (
-    <section id="edukasi" className="relative py-28 px-6 bg-black text-white overflow-hidden">
+    <section id="edukasi" className="relative py-28 px-6 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
         
         {/* SISI KIRI: Judul Section */}

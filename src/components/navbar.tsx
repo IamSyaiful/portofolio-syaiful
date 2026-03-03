@@ -17,7 +17,6 @@ export default function Navbar() {
           <a href="#tentang">About</a>
           <a href="#edukasi">Education</a>
           <a href="#portofolio">Portfolio</a>
-          <a href="#pengalaman">Experience</a>
           <a href="#contact">Contact</a>
         </div>
 
@@ -50,11 +49,9 @@ export default function Navbar() {
         <div className="px-6 pb-6 space-y-4 pt-4">
           <a href="#beranda" className="block hover:text-blue-400 transition">Beranda</a>
           <a href="#tentang" className="block hover:text-blue-400 transition">About</a>
+          <a href="#edukasi" className="block hover:text-blue-400 transition">Education</a>
           <a href="#portofolio" className="block hover:text-blue-400 transition">Portfolio</a>
-          <a href="#pendidikan" className="block hover:text-blue-400 transition">Education</a>
-          <a href="#pengalaman" className="block hover:text-blue-400 transition">Experience</a>
-          <a href="#blog" className="block hover:text-blue-400 transition">Blog</a>
-          <a href="#kontak" className="block hover:text-blue-400 transition">Kontak</a>
+          <a href="#contact" className="block hover:text-blue-400 transition">Contact</a>
         </div>
       </div>
     </nav>

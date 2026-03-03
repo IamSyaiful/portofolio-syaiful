@@ -25,7 +25,7 @@ export default function Portfolio() {
   };
 
   return (
-    <section id="portofolio" className="relative py-28 px-6 bg-black text-white overflow-hidden">
+    <section id="portofolio" className="relative py-28 px-6 text-white overflow-hidden">
       {/* Container ditingkatkan ke max-w-7xl agar sejajar dengan section lain */}
       <div className="max-w-7xl mx-auto">
         

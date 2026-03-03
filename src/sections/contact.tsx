@@ -25,7 +25,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="w-full bg-black py-24 px-6 overflow-hidden flex flex-col items-center">
+    <section id="contact" className="w-full py-24 px-6 overflow-hidden flex flex-col items-center">
       <div className="max-w-4xl w-full mx-auto flex flex-col">
         
         {/* Header Section */}
