@@ -14,11 +14,10 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="space-x-7 hidden md:flex">
           <a href="#beranda">Beranda</a>
-          <a href="#tentang">Tentang</a>
-          <a href="#portofolio">Portofolio</a>
-          <a href="#pendidikan">Pendidikan</a>
-          <a href="#pengalaman">Pengalaman</a>
-          <a href="#blog">Blog</a>
+          <a href="#tentang">About</a>
+          <a href="#pendidikan">Education</a>
+          <a href="#portofolio">Portfolio</a>
+          <a href="#pengalaman">Experience</a>
           <a href="#kontak">Kontak</a>
         </div>
 
@@ -50,10 +49,10 @@ export default function Navbar() {
       >
         <div className="px-6 pb-6 space-y-4 pt-4">
           <a href="#beranda" className="block hover:text-blue-400 transition">Beranda</a>
-          <a href="#tentang" className="block hover:text-blue-400 transition">Tentang</a>
-          <a href="#portofolio" className="block hover:text-blue-400 transition">Portofolio</a>
-          <a href="#pendidikan" className="block hover:text-blue-400 transition">Pendidikan</a>
-          <a href="#pengalaman" className="block hover:text-blue-400 transition">Pengalaman</a>
+          <a href="#tentang" className="block hover:text-blue-400 transition">About</a>
+          <a href="#portofolio" className="block hover:text-blue-400 transition">Portfolio</a>
+          <a href="#pendidikan" className="block hover:text-blue-400 transition">Education</a>
+          <a href="#pengalaman" className="block hover:text-blue-400 transition">Experience</a>
           <a href="#blog" className="block hover:text-blue-400 transition">Blog</a>
           <a href="#kontak" className="block hover:text-blue-400 transition">Kontak</a>
         </div>
