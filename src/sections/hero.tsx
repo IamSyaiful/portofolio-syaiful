@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Button } from "@heroui/react";
-import Link from "next/link";
+import { Mail } from "lucide-react";
 
 export default function Hero() {
   const fullText = "Hello, I am Syaiful Amin";
@@ -38,7 +38,14 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-4">
-           <Button as="a" href="#contact" color="primary" variant="shadow">
+            <Button
+              as="a"
+              href="#contact"
+              color="primary"
+              variant="shadow"
+              className="flex items-center gap-2 transition-all duration-300 hover:scale-105"
+            >
+              <Mail size={18} />
               Contact Me
             </Button>
           </div>
@@ -54,15 +61,17 @@ export default function Hero() {
           <div className="absolute w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full blur-[150px] opacity-20 animate-float-slow"></div>
 
           {/* Foto */}
-          <div className="relative z-10">
-            <Image
-              src="/Foto/syaiful.jpg"
-              alt="Syaiful Amin"
-              width={380}
-              height={380}
-              priority
-              className="rounded-2xl shadow-2xl object-cover border border-gray-700"
-            />
+          <div className="relative z-10 group perspective">
+            <div className="transition-all duration-500 ease-out transform group-hover:scale-105 group-hover:rotate-1 group-hover:-rotate-y-2">
+              <Image
+                src="/Foto/syaiful.jpg"
+                alt="Syaiful Amin"
+                width={380}
+                height={380}
+                priority
+                className="rounded-2xl shadow-2xl object-cover border border-gray-700 transition-all duration-500 group-hover:shadow-blue-500/40 group-hover:shadow-2xl"
+              />
+            </div>
           </div>
 
         </div>
